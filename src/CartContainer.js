@@ -1,9 +1,10 @@
+import { clear } from '@testing-library/user-event/dist/clear'
 import React from 'react'
 import CartItem from './CartItem'
 import { useGlobalContext } from './context'
 
 const CartContainer = () => {
-  const { cart } = useGlobalContext()
+  const { cart,clearAllItems } = useGlobalContext()
   if (cart.length === 0) {
     return (
       <section className='cart'>
@@ -37,7 +38,7 @@ const CartContainer = () => {
         </div>
         <button
           className='btn clear-btn'
-          onClick={() => console.log('clear cart')}
+          onClick={clearAllItems}
         >
           clear cart
         </button>

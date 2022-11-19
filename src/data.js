@@ -1,26 +1,26 @@
 export default [
   {
     id: 1,
-    title: 'Samsung Galaxy S7',
-    price: 599.99,
+    title: 'MacBook Air M2',
+    price: 2.59900,
     img:
-      'https://res.cloudinary.com/diqqf3eq2/image/upload/v1583368215/phone-2_ohtt5s.png',
+      'https://cdn.eraspace.com/pub/media/catalog/product/m/a/macbook_air_m2_midnight_pdp_image_position-1__id.jpg',
     amount: 1,
   },
   {
     id: 2,
-    title: 'google pixel ',
+    title: 'Blackberry Torch',
     price: 499.99,
     img:
-      'https://res.cloudinary.com/diqqf3eq2/image/upload/v1583371867/phone-1_gvesln.png',
+      'https://lzd-img-global.slatic.net/live/id/p/6822cb0032c0a8a2aee864146306bd40.jpg_720x720q80.jpg_.webp',
     amount: 1,
   },
   {
     id: 3,
-    title: 'Xiaomi Redmi Note 2',
+    title: 'IPhone 13 Pro Max',
     price: 699.99,
     img:
-      'https://res.cloudinary.com/diqqf3eq2/image/upload/v1583368224/phone-3_h2s6fo.png',
+      'https://cdn.eraspace.com/pub/media/catalog/product/i/p/iphone_13_pro_max_alpine_green_1_4.jpg',
     amount: 1,
   },
 ];
