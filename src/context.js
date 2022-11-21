@@ -20,11 +20,46 @@ const AppProvider = ({ children }) => {
     dispatch({ type: 'CLEAR_CART' })
   }
 
+  const clearById = (id)=>{
+    console.log(id)
+    dispatch({ type: 'REMOVE', itemId: id})
+  }
+
+  const increase = (id)=>{
+    dispatch({ type: 'INCREASE', itemId: id})
+  }
+  const decrease = (id)=>{
+    dispatch({ type: 'DECREASE', itemId: id})
+  }
+
+  const toggleAmount = (id,type)=>{
+    
+  }
+
+  const fetchApi = async () =>{
+    dispatch({type: 'LOADING'})
+    const data = await fetch(url);
+    const cartData = await data.json();
+    console.log(cartData);
+    dispatch({type:'GET_ITEMS', dataBaru: cartData})
+  }
+
+  useEffect(()=>{
+    fetchApi()
+  },[])
+
+  useEffect(()=>{ 
+    dispatch({type: 'GET_TOTAL'})
+  },[state.cart])
+
   return (
     <AppContext.Provider
       value={{
         ...state,
-        clearAllItems
+        clearAllItems,
+        clearById,
+        increase,
+        decrease
       }}
     >
       {children}
